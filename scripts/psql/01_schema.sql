@@ -1,3 +1,9 @@
+\ir ./00_params.sql
+
+DROP SCHEMA IF EXISTS :schema CASCADE;
+CREATE SCHEMA :schema;
+SET search_path = :schema;
+
 CREATE TABLE aka_name (
     id integer NOT NULL PRIMARY KEY,
     person_id integer NOT NULL,
@@ -168,3 +174,4 @@ CREATE TABLE title (
     series_years character varying(49),
     md5sum character varying(32)
 );
+
